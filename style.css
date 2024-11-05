@@ -34,6 +34,7 @@ OBS: O simbolo de '*' seleciona todas as coisas que tem dentro daquele local que
     */
 body{
     background: var(--fundo-ligth) no-repeat center top /cover;
+    height: 100vh;
 }
 #container {
     width: 100%;
@@ -72,15 +73,19 @@ body * {
 #profile {
     padding: 24px;
 }
+#texto {
+    text-align: center;
+}
 
 #botaonoite {
-    border: 1px solid red;
+    
     position: relative;
     width: 64px;
     margin: 4px auto;
 }
 
 #botaonoite button{
+   
     width: 32px;
     height: 32px;
     background: white var(--botao-noite) no-repeat center;
@@ -90,13 +95,18 @@ body * {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
+    animation: arrasta-para-o-outro-lado 0.4s forwards;
 }
 .ligth #botaonoite button{
-    right: 0;
-    left: initial;
+    animation: arrasta-pro-lado 0.4s forwards;
+    
 }
 
+#botaonoite button:hover {
+    outline: 8px solid var(--fundo-do-botao);
+}
 #botaonoite span {
+    
     display: block;
     width: 64px;
     height: 24px;
@@ -107,6 +117,7 @@ body * {
 }
 
 ul {
+    padding-top: 20px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -173,4 +184,34 @@ ul li a:hover {
     padding: 16px;
     /* border radius 50% cria circulos redondos */
     border-radius: 50%;
+}
+
+/* media queries, define um estilo que vai ser usado depois que o site atingir o px
+definido, o mesmo mudara o estilo para o inserido dentro do media*/
+
+@media (min-width: 700px){
+    :root{
+        --fundo-ligth: url(./assets/assets/bg-desktop.jpg);
+    }
+    .ligth {
+        --fundo-ligth: url(./assets/assets/bg-desktop-light.jpg);
+    }
+}
+
+/* animação do botao */ 
+@keyframes arrasta-pro-lado {
+    from{
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+@keyframes arrasta-para-o-outro-lado {
+    from{
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
