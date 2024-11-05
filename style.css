@@ -1,0 +1,176 @@
+/* remove todas as margens que o navegador coloca, assim temos mais espaços para trabalhar 
+OBS: O simbolo de '*' seleciona todas as coisas que tem dentro daquele local que voce inseriu*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cor-do-texto: white;
+    --fundo-ligth: url(./assets/assets/bg-mobile.jpg);
+    --cor-da-borda-botoes: rgba(255, 255, 255, 0.5);
+    --fundo-do-botao: rgba(255, 255, 255, 0.05);
+    --fundo-do-botao-hover:rgba(255, 255, 255, 0.2);
+    --borda-botao: 1.5px solid white;
+    --social-links: rgba(255, 255, 255, 0.2);
+    --botao-noite:url(/assets/assets/moon-stars.svg)
+}
+.ligth {
+    --cor-do-texto: black;
+    --fundo-ligth: url(./assets/assets/bg-mobile-light.jpg);
+    --cor-da-borda-botoes: rgba(0, 0, 0, 0.5);
+    --fundo-do-botao: rgba(0, 0, 0, 0.5);
+    --fundo-do-botao-hover: rgba(224, 16, 16, 0.1);
+    --borda-botao: 1.5px solid rgb(0, 0, 0);
+    --social-links: rgba(224, 16, 16, 0.1);
+    --botao-noite: url(/assets/assets/sun.svg)
+}
+/*
+    background-image: url(./assets/assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+    background-size: cover;
+    */
+body{
+    background: var(--fundo-ligth) no-repeat center top /cover;
+}
+#container {
+    width: 360px;
+
+    /* a magin só centraliza  as laterais, o superior e inferior precisa ser feito com outra propriedade que pode ser a auto*/
+    margin: auto;
+    margin-top: 56px;
+    
+    
+    
+}
+/* em elementos inline (que é o caso do img) nao conseguimos centralizar com o comando margin (ele só serve para
+elementos de display block */
+#profile img {
+    display: block;
+    width: 112px;
+    margin: auto;
+}
+body * {
+    
+  font-family: "Inter", sans-serif;
+  /* o var é para inserir o nome que voce criou para a propriedade que quer mudar. definida no root */
+  color: var(--cor-do-texto);
+  font-style: normal;
+  
+}
+/* essa é a id do texto inserido abaixo do perfil*/
+#profile p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 8px;
+}
+/* o pai e o original, responsavel pelo img e pelo p*/
+#profile {
+    padding: 24px;
+}
+
+#botaonoite {
+    border: 1px solid red;
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#botaonoite button{
+    width: 32px;
+    height: 32px;
+    background: white var(--botao-noite) no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.ligth #botaonoite button{
+    right: 0;
+    left: initial;
+}
+
+#botaonoite span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--fundo-do-botao);
+    border: 1px solid var(--fundo-do-botao-hover);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /*cria um espaçamento entre os elementos de baixo para cima como uma coluna, só funciona em display flex e grid*/
+    gap: 16px;
+}
+ul li a {
+
+    border: 1px solid red;
+    display: flex;
+    /* deixa o conteudo alinhado horizontalmente */
+    align-items: center;
+     /* deixa o conteudo alinhado verticalmente */
+    justify-content: center;
+ /* altura entre os conteudos */
+    height: 52px;
+    background:var(f);
+    border: 1px solid var(--cor-da-borda-botoes);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 24px 0px;
+
+    
+}
+/*efeito ao passar o mouse encima*/
+ul li a:hover {
+    background:var(--fundo-do-botao-hover);
+    border: var(--borda-botao);
+}
+
+#social-links {
+    display: flex;
+    gap: 16px;
+    padding: 24px 0px;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-links a {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+#social-links a:hover{
+    background: var(--social-links);
+    padding: 16px;
+    /* border radius 50% cria circulos redondos */
+    border-radius: 50%;
+}
+#logos {
+    display: flex;
+    gap: 16px;
+    font-size: 29px;
+    justify-content: center;
+    padding-top: 20px;
+    align-items: center;
+      
+}
+
+#logos :hover{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 16px;
+    /* border radius 50% cria circulos redondos */
+    border-radius: 50%;
+}
