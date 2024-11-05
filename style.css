@@ -13,7 +13,7 @@ OBS: O simbolo de '*' seleciona todas as coisas que tem dentro daquele local que
     --fundo-do-botao-hover:rgba(255, 255, 255, 0.2);
     --borda-botao: 1.5px solid white;
     --social-links: rgba(255, 255, 255, 0.2);
-    --botao-noite:url(/assets/assets/moon-stars.svg);
+    --botao-noite:url(./assets/assets/moon-stars.svg);
 }
 .ligth {
     --cor-do-texto: black;
@@ -23,7 +23,7 @@ OBS: O simbolo de '*' seleciona todas as coisas que tem dentro daquele local que
     --fundo-do-botao-hover: rgba(224, 16, 16, 0.1);
     --borda-botao: 1.5px solid rgb(0, 0, 0);
     --social-links: rgba(224, 16, 16, 0.1);
-    --botao-noite: url(/assets/assets/sun.svg);
+    --botao-noite: url(./assets/assets/sun.svg);
 }
 /*
     background-image: url(./assets/assets/bg-mobile.jpg);
