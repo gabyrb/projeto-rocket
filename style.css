@@ -36,8 +36,8 @@ body{
     background: var(--fundo-ligth) no-repeat center top /cover;
 }
 #container {
-    width: 360px;
-
+    width: 100%;
+    max-width: 588px;
     /* a magin só centraliza  as laterais, o superior e inferior precisa ser feito com outra propriedade que pode ser a auto*/
     margin: auto;
     margin-top: 56px;
